@@ -1,0 +1,16 @@
+{
+    "name" : "example",
+    "active" : true,
+    "proxy" : {
+	"preserve_host": true,
+        "listen_path" : "/example/*",
+        "upstreams" : {
+            "balancing": "roundrobin",
+            "targets": [{"target": "http://192.168.1.108:4000"},
+			]
+        },
+        "strip_path" : false,
+        "append_path" : false,
+        "methods" : ["GET"]
+    }
+}

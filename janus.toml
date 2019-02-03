@@ -1,0 +1,19 @@
+# Global config
+
+port = 8080
+
+[log]
+  level = "debug"
+
+# API config
+[web]
+  port = 8081
+
+  [web.credentials]
+     secret = "secret"
+
+     [web.credentials.basic]
+     users = {admin = "admin"}
+
+[database]
+  dsn = "file:///home/kondanta/work/mangapp/api-gateway-test"
